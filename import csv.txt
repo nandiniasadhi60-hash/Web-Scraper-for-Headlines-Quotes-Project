@@ -1,0 +1,18 @@
+import csv
+
+quotes = [
+    ["The best way to predict the future is to create it.", "Peter Drucker"],
+    ["Believe you can and you're halfway there.", "Theodore Roosevelt"],
+    ["Success is not final, failure is not fatal.", "Winston Churchill"]
+]
+
+with open("quotes.csv", "w", newline="", encoding="utf-8") as file:
+    writer = csv.writer(file)
+
+    # Write column headings
+    writer.writerow(["Quote", "Author"])
+
+    # Save quotes
+    writer.writerows(quotes)
+
+print("Quotes
