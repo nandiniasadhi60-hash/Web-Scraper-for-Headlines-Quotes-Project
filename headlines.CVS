@@ -1,0 +1,13 @@
+import csv
+
+headlines = [
+    ["Technology is changing the world", "Example.com"],
+    ["Latest news and updates", "Example.com"]
+]
+
+with open("headlines.csv", "w", newline="", encoding="utf-8") as file:
+    writer = csv.writer(file)
+    writer.writerow(["Headline", "Website"])
+    writer.writerows(headlines)
+
+print("Headlines saved successfully!")
